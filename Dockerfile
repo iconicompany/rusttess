@@ -15,6 +15,7 @@ RUN echo "TARGET=$TARGET PROFILE=$PROFILE"
 
 COPY ./build ./build
 
+RUN build/dependencies.sh
 RUN build/tesseract.sh
 RUN build/tesseract_dict.sh
 
