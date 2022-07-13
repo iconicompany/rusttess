@@ -1,5 +1,5 @@
 
-use tesseract::{Tesseract, plumbing::TessBaseApiGetUtf8TextError};
+use tesseract::{Tesseract, TesseractError};
 
 fn main() {
     let text = process_image("test/01.PNG").unwrap();
@@ -9,7 +9,7 @@ fn main() {
 
 fn process_image(
     file_name: &str,
-) -> Result<String, TessBaseApiGetUtf8TextError> {
+) -> Result<String, TesseractError> {
     let lang = "rus";
 
     let tesseract = Tesseract::new(None, Some(&lang))?;
