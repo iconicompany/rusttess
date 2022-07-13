@@ -1,2 +1,2 @@
 #add --build-arg DEBUG=1 to make debug version
-docker build -t docclassifierrs . $*
+docker build -t rusttess . $*
